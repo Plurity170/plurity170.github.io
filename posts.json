@@ -1,34 +1,7 @@
-{
-  "id": 4,
-  "title": "DailyDoseCode #004 — One File Runs My Entire Blog",
-  "date": "2026-01-07",
-  "summary": "I built a blog where one JSON file controls publishing, layout, and updates.",
-  "content": "Today I stopped editing HTML and started building systems. By writing a single entry in a JSON file, my homepage, blog archive, and individual post pages update automatically. This is the shift from building pages to building workflows—and it changes everything.",
-  "tags": ["blog", "systems", "learning-in-public"]
-}
 [
   {
-    "id": 3,
-    "title": "DailyDoseCode #003",
-    "date": "2026-01-06",
-    "summary": "Expanded the site into a real multi-page platform.",
-    "content": "Today I converted my site into a structured platform with auto-loading content, blog archives, and monetization readiness.",
-    "tags": ["html", "blog", "progress"]
-  },
-  {
-    "id": 2,
-    "title": "DailyDoseCode #002",
-    "date": "2026-01-05",
-    "summary": "Built mobile-first layouts.",
-    "content": "Learned how to design mobile-first layouts that scale cleanly across devices.",
-    "tags": ["css", "mobile"]
-  },
-  {
-    "id": 1,
-    "title": "DailyDoseCode #001",
-    "date": "2026-01-04",
-    "summary": "Launched my site using GitHub Pages.",
-    "content": "This was the start of building in public with no shortcuts.",
-    "tags": ["github", "launch"]
+    "title": "POST-001",
+    "slug": "post-001.html",
+    "excerpt": "Starting Plurity and building in public."
   }
 ]
