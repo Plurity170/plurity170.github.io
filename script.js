@@ -1,23 +1,21 @@
-<script>
-const postsContainer = document.getElementById("posts");
+document.addEventListener("DOMContentLoaded", () => {
+  const recentPosts = document.getElementById("recent-posts");
 
-// Check cache first
-const cachedPosts = sessionStorage.getItem("postsHTML");
+  // Safety check (prevents white screen)
+  if (!recentPosts) return;
 
-if (cachedPosts) {
-  postsContainer.innerHTML = cachedPosts;
-} else {
-  fetch("posts.json")
-    .then(res => res.json())
-    .then(posts => {
-      let html = "";
-      posts.forEach(post => {
-        html += `<a href="post.html?id=${post.id}">${post.title}</a><br>`;
-      });
-      postsContainer.innerHTML = html;
+  // Clear loading text safely
+  recentPosts.innerHTML = "";
 
-      // Save to session
-      sessionStorage.setItem("postsHTML", html);
-    });
-}
-</script>
+  // Static fallback content (IMPORTANT)
+  const fallback = document.createElement("div");
+  fallback.className = "post";
+
+  fallback.innerHTML = `
+    <h3>POST-001</h3>
+    <p>First public build. More coming soon.</p>
+    <a href="posts/post-001.html">Read more →</a>
+  `;
+
+  recentPosts.appendChild(fallback);
+});
