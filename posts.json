@@ -1,10 +1,10 @@
 {
   "id": 4,
-  "title": "DailyDoseCode #004",
+  "title": "DailyDoseCode #004 — One File Runs My Entire Blog",
   "date": "2026-01-07",
-  "summary": "Created my first real auto-posting blog workflow.",
-  "content": "Today I learned how to publish content by editing a single JSON file. One update now automatically refreshes my homepage and blog without touching HTML. This is my first real step into building systems instead of just pages.",
-  "tags": ["blogging", "workflow", "learning-in-public"]
+  "summary": "I built a blog where one JSON file controls publishing, layout, and updates.",
+  "content": "Today I stopped editing HTML and started building systems. By writing a single entry in a JSON file, my homepage, blog archive, and individual post pages update automatically. This is the shift from building pages to building workflows—and it changes everything.",
+  "tags": ["blog", "systems", "learning-in-public"]
 }
 [
   {
