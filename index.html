@@ -3,106 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plurity — Daily Code Journey</title>
+  <title>Plurity</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0e0e0e;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
       color: #ffffff;
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+    h1, h2, h3 {
+      margin-top: 0;
     }
 
-    h1, h2 {
-      margin-top: 30px;
-      margin-bottom: 15px;
+    a {
+      color: #4da3ff;
+      text-decoration: none;
     }
 
     .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 10px;
+      background: #1c1c1c;
+      padding: 16px;
+      border-radius: 8px;
       margin-bottom: 20px;
     }
 
-    .btn {
+    .form input,
+    .form button {
       width: 100%;
       padding: 12px;
-      background: #00ffd5;
-      color: #000;
-      border: none;
+      margin-bottom: 10px;
       border-radius: 6px;
+      border: none;
+    }
+
+    .form button {
+      background: #4da3ff;
+      color: #000;
       font-weight: bold;
       cursor: pointer;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      text-align: center;
-      opacity: 0.6;
-      margin: 40px 0 10px;
-      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <!-- HERO -->
-    <h1>Welcome to Plurity</h1>
-    <p>Daily code, experiments, and building in public.</p>
+  <!-- HERO -->
+  <h1>Plurity</h1>
+  <p>Building in public. Learning by shipping.</p>
 
-    <!-- RECENT CONTENT -->
-    <h2>Recent Content</h2>
-    <div class="card" id="recent-posts">
-  <h3>Post 001 — Starting in Public</h3>
-  <p>This is the first public post on Plurity.</p>
-  <a href="/posts/post-001.html">Read post →</a>
-</div>
+  <!-- RECENT CONTENT -->
+  <h2>Recent Content</h2>
 
-    <!-- JOIN -->
-    <h2>Join the Journey</h2>
-    <div class= form
-      <form action="https://formspree.io/f/xbjvndlw" method="POST">
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email"
-          required
-          style="
-            width:100%;
-            padding:12px;
-            margin-bottom:10px;
-            border-radius:6px;
-            border:none;
-          "
-        />
-        <button class="btn" type="submit">Subscribe</button>
-      </form>
-    </div>
-
-    <footer>
-      © 2026 Plurity · Built in public
-    </footer>
-
+  <div class="card" id="recent-posts">
+    <h3>Post 001 – Starting in Public</h3>
+    <p>This is the first public post on Plurity.</p>
+    <a href="posts/post-001.html">Read post →</a>
   </div>
 
-  <!-- FUTURE POSTS SCRIPT (SAFE PLACEHOLDER) -->
-  <script>
-    // Later we will load posts here
-    // For now, this prevents errors
-    const posts = document.getElementById("recent-posts");
-  </script>
+  <!-- JOIN -->
+  <h2>Join the Journey</h2>
+
+  <div class="form">
+    <form action="https://formspree.io/f/xbjvndlw" method="POST">
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email"
+        required
+      />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
 </body>
 </html>
