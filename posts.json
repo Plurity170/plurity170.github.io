@@ -1,3 +1,11 @@
+{
+  "id": 4,
+  "title": "DailyDoseCode #004",
+  "date": "2026-01-07",
+  "summary": "Created my first real auto-posting blog workflow.",
+  "content": "Today I learned how to publish content by editing a single JSON file. One update now automatically refreshes my homepage and blog without touching HTML. This is my first real step into building systems instead of just pages.",
+  "tags": ["blogging", "workflow", "learning-in-public"]
+}
 [
   {
     "id": 3,
