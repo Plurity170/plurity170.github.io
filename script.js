@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const msg = document.createElement("p");
-  msg.textContent = "JavaScript is running correctly.";
-  document.body.appendChild(msg);
-});
+document.getElementById("app").insertAdjacentHTML(
+  "beforeend",
+  "<p>JavaScript is running ✔️</p>"
+);
