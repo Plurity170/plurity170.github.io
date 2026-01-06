@@ -1,53 +1,33 @@
-<h1 style="color:red;">HTML IS LOADING</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Plurity</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .post {
+      border: 1px solid #333;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    a { color: #4da3ff; }
+  </style>
 </head>
 
 <body>
 
-  <header class="container">
-    <h1>Welcome to Plurity</h1>
-    <p>Daily code, experiments, and building in public.</p>
-  </header>
+  <h1>Plurity</h1>
+  <p>If you see this, HTML is working.</p>
 
-  <main class="container">
+  <section id="recentPosts"></section>
 
-    <section>
-      <h2>Recent Content</h2>
-
-      <div id="recent-posts" class="card">
-        <p id="loading-text">Loading latest posts...</p>
-        <noscript>
-          <p>Please enable JavaScript to see recent posts.</p>
-        </noscript>
-      </div>
-    </section>
-
-    <section>
-      <h2>Join the Journey</h2>
-
-      <form class="subscribe" onsubmit="event.preventDefault();">
-        <input
-          type="email"
-          placeholder="Your email"
-          required
-        />
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-
-  </main>
-
-  <footer>
-    © 2026 Plurity · Built in public
-  </footer>
-
-  <script src="js/main.js" defer></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
