@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const test = document.createElement("div");
-  test.innerHTML = `
-    <h1>JS IS RUNNING</h1>
-    <p>If you see this, JavaScript works.</p>
-  `;
-  document.body.appendChild(test);
+  const msg = document.createElement("p");
+  msg.textContent = "JavaScript is running correctly.";
+  document.body.appendChild(msg);
 });
