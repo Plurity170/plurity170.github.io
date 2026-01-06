@@ -4,63 +4,28 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About · Plurity170</title>
-
-  <style>
-    body {
-      font-family: system-ui, Arial, sans-serif;
-      background: #0d0d0d;
-      color: #ffffff;
-      line-height: 1.6;
-      margin: 0;
-      padding: 24px;
-    }
-
-    a {
-      color: #bbbbbb;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: auto;
-    }
-
-    h1 {
-      margin-bottom: 16px;
-    }
-
-    .card {
-      background: #161616;
-      padding: 16px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
 
-  <div class="container">
-    <h1>About Me</h1>
-
-    <div class="card">
-      <p>
-        I’m building in public — learning tech, creativity,
-        and consistency one day at a time.
-      </p>
-    </div>
-
-    <div class="card">
-      <p>
-        This website is a living record of growth,
-        experiments, and daily progress.
-      </p>
-    </div>
-
+<main>
+  <h2>About Me</h2>
+  <div class="card">
     <p>
-      ← <a href="index.html">Back to Home</a>
+      I’m documenting my journey — learning tech, building systems,
+      and growing in public, one day at a time.
     </p>
   </div>
+</main>
 
+<footer>© 2026 Plurity170</footer>
 </body>
 </html>
