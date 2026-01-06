@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+  <title>DailyDoseCode</title>
+  <link>https://plurity170.github.io</link>
+  <description>Building systems in public.</description>
+
+  <item>
+    <title>One File Runs My Entire Blog</title>
+    <link>https://plurity170.github.io/post.html?slug=one-file-runs-my-blog</link>
+    <description>I built a blog where one markdown file updates everything.</description>
+    <pubDate>Tue, 07 Jan 2026</pubDate>
+  </item>
+
+</channel>
+</rss>
