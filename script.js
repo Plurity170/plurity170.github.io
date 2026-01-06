@@ -1,21 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const recentPosts = document.getElementById("recent-posts");
+recentPosts.innerHTML = "";
 
-  // Safety check (prevents white screen)
-  if (!recentPosts) return;
+// Static fallback content (IMPORTANT)
+const fallback = document.createElement("div");
+fallback.className = "post";
 
-  // Clear loading text safely
-  recentPosts.innerHTML = "";
+fallback.innerHTML = `
+  <h3>POST-001</h3>
+  <p>First public build. More coming soon.</p>
+  <a href="posts/post-001.html">Read more →</a>
+`;
 
-  // Static fallback content (IMPORTANT)
-  const fallback = document.createElement("div");
-  fallback.className = "post";
-
-  fallback.innerHTML = `
-    <h3>POST-001</h3>
-    <p>First public build. More coming soon.</p>
-    <a href="posts/post-001.html">Read more →</a>
-  `;
-
-  recentPosts.appendChild(fallback);
-});//Fix fallback resent posts script
+recentPosts.appendChild(fallback);
