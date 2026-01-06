@@ -4,80 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plurity</title>
-
-  <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-    }
-
-    a {
-      color: #4da3ff;
-      text-decoration: none;
-    }
-
-    .card {
-      background: #1c1c1c;
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .form input,
-    .form button {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      border: none;
-    }
-
-    .form button {
-      background: #4da3ff;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <h1>Plurity</h1>
-  <p>Building in public. Learning by shipping.</p>
+  <header class="container">
+    <h1>Welcome to Plurity</h1>
+    <p>Daily code, experiments, and building in public.</p>
+  </header>
 
-  <!-- RECENT CONTENT -->
-  <h2>Recent Content</h2>
+  <main class="container">
 
-  <div class="card" id="recent-posts">
-    <h3>Post 001 – Starting in Public</h3>
-    <p>This is the first public post on Plurity.</p>
-    <a href="posts/post-001.html">Read post →</a>
-  </div>
+    <section>
+      <h2>Recent Content</h2>
+      <div id="recent-posts" class="card">
+        <p>Loading latest posts…</p>
+      </div>
+    </section>
 
-  <!-- JOIN -->
-  <h2>Join the Journey</h2>
+    <section>
+      <h2>Join the Journey</h2>
+      <form class="subscribe">
+        <input type="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
 
-  <div class="form">
-    <form action="https://formspree.io/f/xbjvndlw" method="POST">
-      <input
-        type="email"
-        name="email"
-        placeholder="Your email"
-        required
-      />
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
+  </main>
 
+  <footer>
+    © 2026 Plurity · Built in public
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
