@@ -1,17 +1,23 @@
-async function loadPosts() {
-  const res = await fetch("posts/index.json");
-  const posts = await res.json();
+<script>
+const postsContainer = document.getElementById("posts");
 
-  const el = document.getElementById("recent-posts");
-  if (!el) return;
+// Check cache first
+const cachedPosts = sessionStorage.getItem("postsHTML");
 
-  el.innerHTML = posts.map(p => `
-    <div class="record">
-      <strong><a href="post.html?slug=${p.slug}">${p.title}</a></strong>
-      <p>${p.description}</p>
-      <small>${p.date}</small>
-    </div>
-  `).join("");
+if (cachedPosts) {
+  postsContainer.innerHTML = cachedPosts;
+} else {
+  fetch("posts.json")
+    .then(res => res.json())
+    .then(posts => {
+      let html = "";
+      posts.forEach(post => {
+        html += `<a href="post.html?id=${post.id}">${post.title}</a><br>`;
+      });
+      postsContainer.innerHTML = html;
+
+      // Save to session
+      sessionStorage.setItem("postsHTML", html);
+    });
 }
-
-document.addEventListener("DOMContentLoaded", loadPosts);
+</script>
