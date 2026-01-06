@@ -1,13 +1,6 @@
-recentPosts.innerHTML = "";
-
-// Static fallback content (IMPORTANT)
-const fallback = document.createElement("div");
-fallback.className = "post";
-
-fallback.innerHTML = `
-  <h3>POST-001</h3>
-  <p>First public build. More coming soon.</p>
-  <a href="posts/post-001.html">Read more →</a>
-`;
-
-recentPosts.appendChild(fallback);
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.innerHTML = `
+    <h1>JS IS RUNNING</h1>
+    <p>If you see this, JavaScript works.</p>
+  `;
+});
