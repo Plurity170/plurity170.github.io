@@ -18,4 +18,4 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   recentPosts.appendChild(fallback);
-});
+});//Fix fallback resent posts script
