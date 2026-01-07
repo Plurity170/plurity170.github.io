@@ -8,111 +8,93 @@
 </head>
 <body>
 
-  <!-- ===== HEADER / HERO ===== -->
-  <header class="hero">
-    <div class="container">
-      <h1>Divine Dongo</h1>
-      <p class="hero-subtitle">
-        Aspiring Front-End Developer focused on building clean, responsive,
-        and user-friendly websites using HTML, CSS, and JavaScript.
-      </p>
-    </div>
-  </header>
-
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-
-      <p><strong>
-        Front-end developer focused on clean, responsive, and accessible interfaces.
-      </strong></p>
-
-      <p>
-        I enjoy turning ideas into functional digital experiences using modern
-        web technologies. I learn through hands-on projects, practice, and
-        continuous improvement.
-      </p>
-
-      <p>
-        I have a growing interest in creating efficient, visually appealing,
-        and user-friendly web interfaces.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="section section-light">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <div class="projects-grid">
-
-        <!-- Project 1 -->
-        <article class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>
-            A personal portfolio website built with HTML and CSS to showcase
-            my skills, projects, and contact information.
-          </p>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card">
-          <h3>Responsive Landing Page</h3>
-          <p>
-            A responsive landing page created using HTML and CSS, focusing on
-            layout, typography, and mobile-first design.
-          </p>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card">
-          <h3>JavaScript Task Manager</h3>
-          <p>
-            An interactive task manager built with vanilla JavaScript.
-            Users can add, complete, and delete tasks with data stored in
-            localStorage.
-          </p>
-
-          <div class="project-buttons">
-            <button id="open-task-manager">Live Demo</button>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TASK MANAGER (MODAL) ===== -->
-  <div id="task-modal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Task Manager</h3>
-
-      <div class="task-input">
-        <input type="text" id="task-input" placeholder="Enter a new task" />
-        <button id="add-task">Add Task</button>
-      </div>
-
-      <ul id="task-list"></ul>
-
-      <button class="close-modal" id="close-task-manager">Close</button>
-    </div>
+<header class="header">
+  <div class="container">
+    <h1>Divine Dongo</h1>
+    <p class="subtitle">
+      Aspiring Front-End Developer building clean, responsive, and user-friendly web interfaces.
+    </p>
+    <button id="themeToggle" class="btn secondary">Toggle Dark Mode</button>
   </div>
+</header>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:divinedongo@yahoo.com">divinedongo@yahoo.com</a></p>
-    </div>
+<main class="container">
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a front-end developer focused on building clean, responsive, and accessible
+      web interfaces using HTML, CSS, and JavaScript.
+    </p>
+    <p>
+      I enjoy turning ideas into functional digital experiences through hands-on
+      projects and continuous learning.
+    </p>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <p>© 2026 Divine Dongo. All rights reserved.</p>
-  </footer>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
 
-  <script src="js/script.js"></script>
+    <!-- Portfolio Project -->
+    <article class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>
+        A personal portfolio website built with HTML, CSS, and JavaScript to
+        showcase projects and contact information.
+      </p>
+    </article>
+
+    <!-- Landing Page -->
+    <article class="project-card">
+      <h3>Responsive Landing Page</h3>
+      <p>
+        A mobile-first landing page focusing on layout, typography, and responsive
+        design principles.
+      </p>
+    </article>
+
+    <!-- Task Manager -->
+    <article class="project-card">
+      <h3>JavaScript Task Manager</h3>
+      <p>
+        An interactive task manager built with vanilla JavaScript.
+        Tasks are saved using localStorage.
+      </p>
+
+      <button id="openTaskManager" class="btn">Live Demo</button>
+
+      <!-- Task Manager Demo -->
+      <div id="taskManager" class="task-manager hidden">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Enter a new task"
+        />
+        <button id="addTask" class="btn">Add Task</button>
+        <ul id="taskList"></ul>
+        <button id="closeTaskManager" class="btn secondary">Close</button>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email:
+      <a href="mailto:divinedongo@yahoo.com">divinedongo@yahoo.com</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Divine Dongo. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
