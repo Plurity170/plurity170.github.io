@@ -1,48 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Divine Dongo | Portfolio</title>
-<nav class="navbar">
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Dongo | Web Developer</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0a2540;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+    }
+
+    nav {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1, h2, h3 {
+      color: #0a2540;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background-color: #0a2540;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- About -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am an aspiring web developer focused on building clean, responsive,
-    and user-friendly websites using HTML, CSS, and JavaScript.
-  </p>
-</section>
+  <!-- HEADER / NAV -->
+  <header>
+    <nav>
+      <div><strong>Divine Dongo</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<!-- Projects -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Portfolio Website</h3>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Hi, I'm Divine Dongo</h1>
     <p>
-      A simple personal portfolio website showcasing my skills and projects.
+      Aspiring Web Developer focused on building clean, responsive, and user-friendly websites using HTML, CSS, and JavaScript.
     </p>
-  </div>
-</section>
+  </section>
 
-<!-- Contact -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    Email: yourname@email.com
-  </p>
-</section>
+  <main class="container">
 
-<footer>
-  <p>© 2026 Divine Dongo</p>
-</footer>
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I am an aspiring web developer with a strong interest in front-end development.
+        I enjoy turning ideas into real, usable websites and continuously improving my skills.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+
+      <h3>Portfolio Website</h3>
+      <p>
+        A personal portfolio website built with HTML and CSS to showcase my skills and projects.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email: divinedongo@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/urity170" target="_blank">github.com/urity170</a></p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Divine Dongo</p>
+  </footer>
+
 </body>
 </html>
