@@ -1,16 +1,17 @@
-// Script ready for future JavaScript features
-// Keeping this file clean avoids breaking the site
-console.log("Portfolio loaded successfully");
+// Get elements
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 
+// Load tasks from localStorage or start empty
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
+// Save tasks to localStorage
 function saveTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+// Render tasks to the page
 function renderTasks() {
   taskList.innerHTML = "";
 
@@ -18,53 +19,38 @@ function renderTasks() {
     const li = document.createElement("li");
     li.textContent = task.text;
 
-li.addEventListener("click", () => {
-  tasks[index].completed = !tasks[index].completed;
-  saveTasks();
-  renderTasks();
-});
-
-li.addEventListener("click", () => {
-  tasks[index].completed = !tasks[index].completed;
-  saveTasks();
-  renderTasks();
-});
-
+    // Style completed tasks
     if (task.completed) {
       li.style.textDecoration = "line-through";
+      li.style.opacity = "0.6";
     }
 
+    // Toggle complete on click
     li.addEventListener("click", () => {
-      task.completed = !task.completed;
+      tasks[index].completed = !tasks[index].completed;
       saveTasks();
       renderTasks();
     });
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "❌";
-    deleteBtn.style.marginLeft = "10px";
-
-    deleteBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      tasks.splice(index, 1);
-      saveTasks();
-      renderTasks();
-    });
-
-    li.appendChild(deleteBtn);
     taskList.appendChild(li);
   });
 }
 
+// Add new task
 addTaskBtn.addEventListener("click", () => {
   const text = taskInput.value.trim();
+
   if (text === "") return;
 
-  tasks.push({ text, completed: false });
-  saveTasks();
-  renderTasks();
+  tasks.push({
+    text: text,
+    completed: false
+  });
 
   taskInput.value = "";
+  saveTasks();
+  renderTasks();
 });
 
+// Initial render on page load
 renderTasks();
