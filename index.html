@@ -9,29 +9,30 @@
 
 <body>
 
-  <!-- Header / Navigation -->
   <header>
-    <h1>Divine Dongo</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <nav class="navbar">
+    <h1 class="logo">Divine Dongo</h1>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Hero -->
-<section class="hero">
-  <h1>Hi, I’m Divine Dongo</h1>
-  <p>
-    Aspiring Front-End Developer focused on building clean, responsive,
-    and user-friendly websites using HTML, CSS, and JavaScript.
-  </p>
-  <p class="highlight">
-    Open to internships and junior front-end developer opportunities.
-  </p>
-</section>
+<main>
+  <section class="hero">
+    <p class="intro">Hi, I’m</p>
+    <h2 class="name">Divine Dongo</h2>
+    <p class="tagline">
+      Aspiring Front-End Developer focused on building clean, responsive,
+      and user-friendly websites using HTML, CSS, and JavaScript.
+    </p>
+    <p class="status">
+      Open to internships and junior front-end developer opportunities.
+    </p>
+  </section>
 
-  <!-- About -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -40,56 +41,50 @@
       functional digital experiences using modern web technologies.
     </p>
     <p>
-      I am continuously improving my skills through hands-on projects,
-      practice, and learning, with a growing interest in creating efficient,
-      accessible, and visually appealing web interfaces.
+      I learn through hands-on projects, practice, and continuous improvement,
+      with a growing interest in creating efficient, accessible, and visually
+      appealing web interfaces.
     </p>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
 
-    <div class="projects-container">
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>
+        A personal portfolio website built with HTML and CSS to showcase my
+        skills, projects, and contact information.
+      </p>
+    </div>
 
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>
-          A personal portfolio website built with HTML and CSS to showcase
-          my skills, projects, and contact information.
-        </p>
-      </div>
+    <div class="project-card">
+      <h3>Responsive Landing Page</h3>
+      <p>
+        A responsive landing page created using HTML and CSS, focusing on
+        layout, typography, and mobile-first design.
+      </p>
+    </div>
 
-      <div class="project-card">
-        <h3>Responsive Landing Page</h3>
-        <p>
-          A responsive landing page created using HTML and CSS, focusing on
-          layout, typography, and mobile-first design.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>JavaScript Mini App</h3>
-        <p>
-          A simple JavaScript application demonstrating basic interactivity,
-          DOM manipulation, and user input handling.
-        </p>
-      </div>
-
+    <div class="project-card">
+      <h3>JavaScript Mini App</h3>
+      <p>
+        A simple JavaScript application demonstrating basic interactivity,
+        DOM manipulation, and user input handling.
+      </p>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <strong>divinedongo@yahoo.com</strong></p>
+    <p>Email: <a href="mailto:divinedongo@yahoo.com">divinedongo@yahoo.com</a></p>
   </section>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Divine Dongo. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<footer>
+  <p>© 2026 Divine Dongo. All rights reserved.</p>
+</footer>
+  
+ <script src="script.js"></script>
 </body>
 </html>
