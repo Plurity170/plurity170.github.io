@@ -1,1 +1,3 @@
-console.log("script.js loaded successfully");
+function testJS() {
+  alert("JavaScript is working!");
+}
