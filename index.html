@@ -4,171 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Divine Dongo | Front-End Developer</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #1f2933;
-      background-color: #f8fafc;
-    }
-
-    header {
-      background-color: #0f2f4f;
-      color: #ffffff;
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin-bottom: 0.5rem;
-      font-size: 2.2rem;
-    }
-
-    header p {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
-
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-      color: #0f2f4f;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      background: #ffffff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #0f2f4f;
-      color: #ffffff;
-      font-size: 0.9rem;
-    }
-
-    a {
-      color: #0f2f4f;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>Divine Dongo</h1>
-    <p>
-      Aspiring Front-End Developer focused on building clean, responsive,
-      and user-friendly websites using HTML, CSS, and JavaScript.
-    </p>
+  <!-- ===== HEADER / HERO ===== -->
+  <header class="hero">
+    <div class="container">
+      <h1>Divine Dongo</h1>
+      <p class="hero-subtitle">
+        Aspiring Front-End Developer focused on building clean, responsive,
+        and user-friendly websites using HTML, CSS, and JavaScript.
+      </p>
+    </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
 
-    <p>
-      I am a front-end web developer with a strong focus on building clean,
-      responsive, and user-friendly websites. I enjoy turning ideas into
-      functional digital experiences using modern web technologies.
-    </p>
+      <p><strong>
+        Front-end developer focused on clean, responsive, and accessible interfaces.
+      </strong></p>
 
-    <p>
-      I learn through hands-on projects, practice, and continuous improvement,
-      with a growing interest in creating efficient, accessible, and visually
-      appealing web interfaces.
-    </p>
+      <p>
+        I enjoy turning ideas into functional digital experiences using modern
+        web technologies. I learn through hands-on projects, practice, and
+        continuous improvement.
+      </p>
+
+      <p>
+        I have a growing interest in creating efficient, visually appealing,
+        and user-friendly web interfaces.
+      </p>
+    </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section section-light">
+    <div class="container">
+      <h2>Projects</h2>
 
-    <div class="projects">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>
-          A personal portfolio website built with HTML and CSS to showcase
-          my skills, projects, and contact information.
-        </p>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>
+            A personal portfolio website built with HTML and CSS to showcase
+            my skills, projects, and contact information.
+          </p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <h3>Responsive Landing Page</h3>
+          <p>
+            A responsive landing page created using HTML and CSS, focusing on
+            layout, typography, and mobile-first design.
+          </p>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <h3>JavaScript Task Manager</h3>
+          <p>
+            An interactive task manager built with vanilla JavaScript.
+            Users can add, complete, and delete tasks with data stored in
+            localStorage.
+          </p>
+
+          <div class="project-buttons">
+            <button id="open-task-manager">Live Demo</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TASK MANAGER (MODAL) ===== -->
+  <div id="task-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Task Manager</h3>
+
+      <div class="task-input">
+        <input type="text" id="task-input" placeholder="Enter a new task" />
+        <button id="add-task">Add Task</button>
       </div>
 
-      <div class="project-card">
-        <h3>Responsive Landing Page</h3>
-        <p>
-          A responsive landing page created using HTML and CSS, focusing
-          on layout, typography, and mobile-first design.
-        </p>
-      </div>
+      <ul id="task-list"></ul>
 
-      <div class="project-card">
-        <h3>JavaScript Mini App</h3>
-        <p>
-          A simple JavaScript application demonstrating basic interactivity,
-          DOM manipulation, and user input handling.
-        </p>
-      </div>
-<section id="project">
- <h2>Project</h2>
-
- <div class="project-card">
-  <h3>JavaScript Task Manager</h3>
-  <p>
-    An interactive task manager built with vanilla JavaScript. 
-    Users can add, complete, and delete tasks with data stored in localStorage.
-  </p>
-
-  <div class="todo-app">
-    <input type="text" id="taskInput" placeholder="Enter a new task" />
-    <button id="addTaskBtn">Add Task</button>
-
-    <ul id="taskList"></ul>
+      <button class="close-modal" id="close-task-manager">Close</button>
+    </div>
   </div>
 
- <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email:
-      <a href="mailto:divinedongo@yahoo.com">
-        divinedongo@yahoo.com
-      </a>
-    </p>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:divinedongo@yahoo.com">divinedongo@yahoo.com</a></p>
+    </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Divine Dongo. All rights reserved.
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2026 Divine Dongo. All rights reserved.</p>
   </footer>
-<script src="script.js"></script>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
