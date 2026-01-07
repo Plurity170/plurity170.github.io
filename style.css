@@ -1,0 +1,113 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* THEME VARIABLES */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --card: #f4f4f4;
+  --border: #dddddd;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --card: #1e1e1e;
+  --border: #333333;
+}
+
+/* BASE */
+body {
+  font-family: Georgia, serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* HEADINGS */
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* PROJECT CARDS */
+.project-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* DEMO */
+.demo {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+#task-list li {
+  margin-bottom: 0.5rem;
+}
+
+.close-btn {
+  margin-top: 1rem;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
