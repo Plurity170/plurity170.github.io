@@ -1,6 +1,4 @@
-const button = document.getElementById("actionBtn");
-const output = document.getElementById("output");
-
-button.addEventListener("click", () => {
-  output.textContent = "JavaScript is connected and responding.";
+document.getElementById("actionBtn").addEventListener("click", () => {
+  document.getElementById("status").textContent =
+    "Thanks for visiting. More content will be added soon.";
 });
