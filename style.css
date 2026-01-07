@@ -87,3 +87,17 @@ footer {
   padding: 15px;
   font-size: 14px;
 }
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0d3b66;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #092a4a;
+}
