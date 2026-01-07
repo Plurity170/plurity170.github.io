@@ -24,6 +24,12 @@ li.addEventListener("click", () => {
   renderTasks();
 });
 
+li.addEventListener("click", () => {
+  tasks[index].completed = !tasks[index].completed;
+  saveTasks();
+  renderTasks();
+});
+
     if (task.completed) {
       li.style.textDecoration = "line-through";
     }
