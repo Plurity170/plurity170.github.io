@@ -2,113 +2,74 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  background-color: #f7f9fc;
+  background: #f4f6f8;
   color: #222;
-}
-
-/* REUSABLE CONTAINER */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
+  line-height: 1.6;
 }
 
 /* HEADER */
-.header {
-  background-color: #0b2a45;
+header {
+  background: #0a2a43;
   color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.logo {
+header h1 {
   margin-bottom: 10px;
 }
 
-.nav a {
+nav a {
   color: #fff;
-  text-decoration: none;
   margin: 0 10px;
+  text-decoration: none;
   font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* HERO */
 .hero {
-  padding: 60px 0;
+  padding: 50px 20px;
   text-align: center;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  background: #ffffff;
 }
 
 .hero span {
-  color: #0b2a45;
+  color: #0a2a43;
 }
 
 /* SECTIONS */
-.section {
-  padding: 60px 0;
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
-.section h2 {
+section h2 {
   margin-bottom: 20px;
+  color: #0a2a43;
 }
 
-.section.alt {
-  background-color: #eef2f7;
-}
-
-/* PROJECTS */
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
+/* PROJECT CARD */
 .project-card {
   background: #fff;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* FOOTER */
-.footer {
-  background-color: #0b2a45;
+footer {
+  background: #0a2a43;
   color: #fff;
   text-align: center;
   padding: 15px;
   margin-top: 40px;
-}
-
-/* DESKTOP */
-@media (min-width: 768px) {
-  .header-content {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .logo {
-    margin-bottom: 0;
-  }
-
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h2 {
-    font-size: 2.5rem;
-  }
 }
