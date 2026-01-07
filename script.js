@@ -1,51 +1,64 @@
-const modal = document.getElementById("task-modal");
-const openBtn = document.getElementById("open-task-manager");
-const closeBtn = document.getElementById("close-task-manager");
-const taskInput = document.getElementById("task-input");
-const addTaskBtn = document.getElementById("add-task");
-const taskList = document.getElementById("task-list");
+/* ---------- DARK MODE ---------- */
+const themeToggle = document.getElementById("themeToggle");
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark") ? "dark" : "light"
+  );
+});
+
+/* ---------- TASK MANAGER ---------- */
+const openBtn = document.getElementById("openTaskManager");
+const closeBtn = document.getElementById("closeTaskManager");
+const taskManager = document.getElementById("taskManager");
+const taskInput = document.getElementById("taskInput");
+const addTaskBtn = document.getElementById("addTask");
+const taskList = document.getElementById("taskList");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-// ===== MODAL =====
 openBtn.addEventListener("click", () => {
-  modal.classList.remove("hidden");
-  renderTasks();
+  taskManager.classList.remove("hidden");
 });
 
 closeBtn.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
-
-// ===== TASKS =====
-addTaskBtn.addEventListener("click", () => {
-  const taskText = taskInput.value.trim();
-  if (taskText === "") return;
-
-  tasks.push(taskText);
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-  taskInput.value = "";
-  renderTasks();
+  taskManager.classList.add("hidden");
 });
 
 function renderTasks() {
   taskList.innerHTML = "";
-
   tasks.forEach((task, index) => {
     const li = document.createElement("li");
     li.textContent = task;
 
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "X";
-    deleteBtn.style.marginLeft = "10px";
-
-    deleteBtn.addEventListener("click", () => {
+    deleteBtn.textContent = "✕";
+    deleteBtn.onclick = () => {
       tasks.splice(index, 1);
-      localStorage.setItem("tasks", JSON.stringify(tasks));
-      renderTasks();
-    });
+      saveTasks();
+    };
 
     li.appendChild(deleteBtn);
     taskList.appendChild(li);
   });
 }
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  renderTasks();
+}
+
+addTaskBtn.addEventListener("click", () => {
+  if (taskInput.value.trim() === "") return;
+  tasks.push(taskInput.value.trim());
+  taskInput.value = "";
+  saveTasks();
+});
+
+renderTasks();
